@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors In CSS</title>
+    <style>
+        div {
+            /* background-color: red; */
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Child Selector --> Immediate Child, in this p is the immediate child of div */
+        div>p {
+            background-color: aqua;
+        }
+
+        /* Descendant Selector - element is present anywhere under the parent */
+        div p{
+            background-color: brown;
+        }
+
+        a{
+            color: cadetblue;
+        }
+
+        /* Pseudo Selectors */
+        a:visited{
+            color: chocolate;
+        }
+
+        a:hover{
+            background-color: turquoise;
+        }
+
+        a:link{
+            background-color: yellow
+        }
+
+        p:first-child{
+            background-color: rgb(10, 20, 75);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is the first heading</h1>
+
+    <div class="red">
+        <p>I am one</p>
+        <p>I am two</p>
+    </div>
+
+    <div id="green">
+        <article>
+            <p>I am div and I dont know what to do</p>
+        </article>
+    </div>
+
+    <a href="https://www.google.com" target="_blank">Go to Google</a>
+</body>
+
+</html>
