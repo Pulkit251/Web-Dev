@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+
+        .box1{
+            background-color: violet;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid blue;
+            height: 200px;
+            /* box sizing here means that the total height of the content + padding + border will be 200 */
+            /* otherwise if we dont use box-sizing then the height of the content only will be 200px */
+            box-sizing: border-box;
+        }
+        /* Concept of margin collapse - Now in box 1 and box 2 both have a margin of 5px, so that means the second box should be having a margin of div1 + div2 margin */
+        /* Here margin collapse plays it role - only the margin which is higher in number will be used, ie margin of 2nd box will be used at it has a higher value of 5 */
+        .box2{
+            background-color: teal;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            /* MARGIN COLLAPSE */
+            margin-top: 10px;
+            border: 1px solid blue;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">This is the first box</div>
+    <div class="box box2">This is the second box</div>
+</body>
+</html>
