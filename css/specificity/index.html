@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* This element has a specificity of 1 as its the opening element*/
+        h1 {
+            color: aquamarine;
+        }
+
+        /* This element has a specificity of 10 as its a class selector */
+        .yellow {
+            color: yellow;
+        }
+
+        /* This element has a specificity of 10 as its a class selector */
+        .cred {
+            color: cadetblue !important;
+        }
+
+        /* This element has a specificity of 10 as its a class selector */
+        .purple {
+            color: purple;
+        }
+
+        [data-x=a] {
+            color: red !important;
+        }
+
+        /* This element has a specificity of h1 as 1 and class as 10 which equals 11, i.e if we apply this, it will override the above classes who have specificity of 10 */
+        h1.purple {
+            color: violet;
+        }
+
+        /* This element has specificity equal to a=1 + harryclass=10 + rohan-class=10 + hrefatrrtibute = 10 + pseudo class= 10 which is 41 */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+
+        .order {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inline styles always has the maximum specificity and can be overrided by !important only -->
+    <h1 class="yellow cred purple" data-x="a">This is a lecture about css specificity</h1>
+
+
+    <p>/* main learning of the course */ - This is how specificity is calculated</p>
+
+    <p class="order">Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector
+    </p>
+</body>
+
+</html>
