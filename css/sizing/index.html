@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: aqua;
+            border: 2px solid black;
+            margin: 15px auto;
+            width: 80vw;
+            height: 10vh;
+        }
+
+        .container {
+            background-color: blueviolet;
+            width: 80vw;
+            margin: 23px auto;
+        }
+
+        .container2 {
+            background-color: aquamarine;
+            margin: 23px auto;
+            width: 80%;
+            /* min-height is that the container should have a min of a given height and maximum height can be anyhting */
+            min-height: 80vw;
+        }
+
+        .container2>div {
+            /* Here the width took the dimensions of 50% of the parent */
+            width: 50%;
+            border: 2px solid black;
+        }
+
+        .container2>div>div {
+            /* Here the 2nd dov container takes the 50% of its parent who has taken 50% of its parent */
+            width: 50%;
+            border: 2px solid salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">This is container one</div>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, quisquam magni unde ex temporibus ea
+            adipisci iste hic. Fugiat officiis vel modi error?
+        </p>
+    </div>
+
+    <div class="container2">
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque odio dignissimos aperiam eius molestias,
+            unde natus magni aut perferendis nesciunt tenetur architecto nemo.
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, tenetur dolorum quidem in sapiente,
+                hic illum sed delectus eligendi esse sit commodi ab perferendis nam eveniet iure quo est architecto.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
