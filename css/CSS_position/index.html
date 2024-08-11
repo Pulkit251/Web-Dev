@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* difference between sticky and fixed is */
+        /* sticky - gets pasted on the above as the contents get scrolled */
+        /* fixed - jaha chiplka diya vaha chipak gya */
+        .parent{
+            border: 3px solid salmon;
+            margin: 57px 30px;
+            /* width: 100px; */
+            position: relative;
+        }
+
+        /* The parent should be positioned in absolute otherwise it will take the parent as html */
+        /* transform, invert and perspective are also attributes if which are present in the parent, the element will be relative to the parent */
+        .box{
+            width: 80vw;
+            height: 50vh;
+            border: 2px solid black;
+            padding: 2px;
+            margin: 4px auto;
+        }
+
+        .box1{
+            background-color: aquamarine;
+            position: relative;
+            top: 5px;
+        }
+
+        .box2{
+            background-color: blueviolet;
+            /* in absolute in finds the nearest positioned ancestor to which it should relate heoght width padding and margin */
+            position: sticky;
+            top: 0px;
+        }
+
+        .box3{
+            background-color: violet;
+            position: fixed;
+            top: 10px;
+
+        }
+
+        .box4{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>
