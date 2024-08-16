@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: red;
+        }
+
+        @media only screen and (min-width: 455px) {
+            body{
+                background-color: blue;
+            }
+
+            .boxes{
+                flex-direction: column;
+            }
+        }
+
+        .boxes{            
+            display: flex;
+        }
+
+        .box{
+            background-color: aqua;
+            width: 10vw;
+            height: 10vh;
+            margin: 10px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+</html>

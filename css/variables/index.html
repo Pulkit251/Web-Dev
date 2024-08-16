@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --color: violet;
+            --setcolor: rgb(255, 207, 247);
+            --childcolor: rgb(241, 175, 175);
+            --defpad: 34px;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav{
+            background-color: var(--color);
+            border: 2px solid black;
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+        }
+
+        ul li{
+            background-color: var(--childcolor);
+            padding: var(--defpad);   
+            border: 2px solid rgb(57, 8, 8);         
+        }
+
+        ul li:first-child{
+            background-color: var(--childcolor);
+        }
+
+        .container{
+            background-color: var(--setcolor);
+            /* background-color: rgb(230, 185, 230); */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About Us </li>
+            <li>Contacts</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta ipsa asperiores aut? Vero, asperiores placeat
+            porro quia eaque impedit. Odio autem mollitia quasi.
+        </p>
+    </div>
+</body>
+
+</html>
