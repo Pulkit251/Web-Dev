@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar Variables</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        </style>
+    <style>
+        :root{
+            --background-color: rgb(7, 5, 5);
+            --nav-color: rgb(188, 39, 51);
+            --text-color: white;
+        }
+        
+        body{
+            background-color: var(--background-color);
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            /* margin: 10px; */
+            padding: 15px;
+            background-color: var(--nav-color);
+        }
+
+        ul li{
+            list-style: none;
+            display: inline;
+            padding: 30px;
+            font-size: 20px;
+            color: var(--text-color);
+            font-family: "Oswald", sans-serif;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+            </ul>
+        </nav>
+     </header>
+</body>
+</html>
