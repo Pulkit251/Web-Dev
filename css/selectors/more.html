@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box:first-child {
+            border: 2px solid black;
+            background-color: red;
+        }
+
+        .box1::first-line{
+            color: purple;
+        }
+
+        .boxes *{
+            color: blue;
+            border: 2px solid green;
+        }
+
+        [data-color="primary"]{
+            background-color: rgb(131, 127, 97);
+        }
+
+        .box:nth-child(1){
+            padding-top: 45px;
+        }
+
+        .box:nth-last-child(3){
+            color: aqua;
+        }
+
+        ::selection{
+            color: aqua;
+            background-color: black;
+        }
+
+        .box::first-letter{
+            font-size: 50px;
+            color: brown;
+        }
+
+        .boxes::before{
+            content: "Hello Myself Pulkit Agarwal";
+            background-color: turquoise;
+        }
+
+        .boxes::after{
+            content: "Finished";
+        }
+
+        input::placeholder{
+            color: tomato;
+        }
+
+
+        /* .boxes *{
+            margin: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">I am a box</div>
+        <div class="box">I am a box</div>
+        <div class="box">I am a box</div>
+        <div data-color="primary" class="box">I am a box</div>
+        <div class="box1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure eum, facere distinctio iste nemo
+            reiciendis modi obcaecati earum debitis ea veritatis numquam, consequatur est assumenda dolores nihil
+            accusantium illo, aspernatur porro beatae! Maxime sapiente, maiores id possimus ipsum velit? Mollitia, at
+            voluptates nesciunt similique provident tempora impedit! Tenetur, blanditiis tempore.</div>
+
+    </div>
+
+    <input type="text" placeholder="Your Name Here">
+</body>
+
+</html>
